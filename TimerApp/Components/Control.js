@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, version } from 'react';
 import {
     SafeAreaView,
     StyleSheet,
@@ -10,8 +10,8 @@ import {
  class Control extends Component {
   render(){
     return(    
-    <View style={styles.container}>
-        <Text style={styles.txt}>HelloWorld</Text>
+        <View style={styles.container}>
+        <Text style={[styles.txt,{color:'blue'}]}>Create Component with class</Text>
     </View>
     )
 }
@@ -19,13 +19,20 @@ import {
 const Control1 = ()=>{
     return(
         <View style={styles.container}>
-            <Text style={[styles.txt,{color:'red'}]}>HelloWorld</Text>
+            <Text style={[styles.txt,{color:'red'}]}>Create Component with a variable store an anonymous function</Text>
+        </View>
+    )
+}
+function cre(){
+    return (
+        <View style={styles.container}>
+            <Text style={[styles.txt,{color:'green'}]}>Create a Component with a normal function</Text>
         </View>
     )
 }
 const styles = StyleSheet.create({
 txt:{
-    fontSize:30,
+    fontSize:15,
     fontWeight:'bold',
     //color:'red',
 },
@@ -35,4 +42,4 @@ container:{
     flex:1, 
 }
 });
-module.exports = {Control,Control1};
+module.exports = {Control,Control1,cre};
