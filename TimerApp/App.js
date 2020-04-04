@@ -18,9 +18,7 @@ import {
      });
    }  
    sub = ()=>{
-    this.setState(pre=>{
-      return {result : pre.result -1};
-    });
+    this.setState({result:this.state.result-1})//2 way to setState
   }
   render(){
     return(
