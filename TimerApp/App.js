@@ -9,16 +9,16 @@ import {
    constructor(props){
      super(props);
      this.state = {result:0};
+     console.log('ABCDSA');
      //this.add = this.add.bind(this);
      //this.sub = this.sub.bind(this);
    }
-   add = ()=>{
-     this.setState(pre=>{
-       return {result : pre.result +1};
-     });
+   add(){
+     console.log('ABC');
    }  
    sub = ()=>{
-    this.setState({result:this.state.result-1})//2 way to setState
+    // this.setState({result:this.state.result-1})//2 way to setState
+    console.log(this);
   }
   render(){
     return(
