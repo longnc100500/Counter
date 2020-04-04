@@ -13,8 +13,16 @@ import {
      //this.add = this.add.bind(this);
      //this.sub = this.sub.bind(this);
    }
-   
-  
+   add = ()=>{
+     this.setState(pre=>{
+       return {result : pre.result +1};
+     });
+   }  
+   sub = ()=>{
+    this.setState(pre=>{
+      return {result : pre.result -1};
+    });
+  }
   render(){
     return(
       <View style={styles.container}>
