@@ -17,8 +17,14 @@ import {
      console.log('ABC');
    }  
    sub = ()=>{
+<<<<<<< HEAD
     // this.setState({result:this.state.result-1})//2 way to setState
     console.log(this);
+=======
+    this.setState(pre=>{
+      return {result : pre.result -1};
+    });
+>>>>>>> parent of 7dea94e... add another setstate way
   }
   render(){
     return(
