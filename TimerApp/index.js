@@ -8,6 +8,6 @@ import {name as appName} from './app.json';
 import Control from './Components/Control';
 import Sub from './Components/learnProps';
 function getComponentFunction(){
-    return Sub;
+    return App;
 }
-AppRegistry.registerComponent(appName,getComponentFunction)
+AppRegistry.registerComponent(appName,()=>App)
