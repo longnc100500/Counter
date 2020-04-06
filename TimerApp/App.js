@@ -13,11 +13,20 @@ import {
      //this.add = this.add.bind(this);
      //this.sub = this.sub.bind(this);
    }
-   add = ()=>{
-     this.setState(pre=>{
-       return {result : pre.result +1};
-     });
-   }  
+  //  add = ()=>{
+  //    this.setState(pre=>{
+  //      return {result : pre.result +1};
+  //    });
+  //  }  
+  add(){
+    
+    return function(event){
+        console.log(this)
+        this.setState(pre=>{
+          return{result:pre.result+1};
+        })
+    }
+  }
    sub = ()=>{
     this.setState(pre=>{
       return {result : pre.result -1};
@@ -28,7 +37,7 @@ import {
       <View style={styles.container}>
         <Text style={styles.result}>{this.state.result}</Text>
           <View style={styles.btnContainer}>
-          <TouchableOpacity style = {styles.addButton} onPress = {this.add}>
+          <TouchableOpacity style = {styles.addButton} onPress = {this.add()}>
             <Text style={styles.icon}>+</Text>
           </TouchableOpacity>
           <TouchableOpacity style={styles.subButton} onPress={this.sub}>
